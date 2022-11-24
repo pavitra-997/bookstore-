@@ -1,0 +1,62 @@
+<app-header [content]="pageContent.header"></app-header>
+
+<body style="margin-left: 50px;">
+<div class="container">
+  
+    <h3>{{newBook.name}}</h3>
+   <div class="row" >
+       <div class="col-md-4">
+           <div class="imgAbt">
+               <img width="250" height="350" src={{newBook.image}} style="margin-bottom: 10px;"/>
+               
+           </div>
+       </div>
+       <div class="col-md-8">
+        <h3>About the book</h3>
+            <p>This novel is a magical story that reveals the essence of life, 
+                love and loneliness. Due to the simplicity of the prose style, 
+                breezy and funny illustrations, vividness of imagination this 
+                simple yet insightful story is considered to be one of the greatest 
+                literary works of all times.</p>
+            
+            <h4>Name: {{newBook.name}}</h4>
+            <h5>Author:{{newBook.author}}</h5>
+            <h5>Price: ${{newBook.price}}</h5>
+            <h5>Language: {{newBook.publish_details[0].language}}</h5>
+            <h5>Publisher:{{newBook.publish_details[0].publisher}}</h5>
+            <h5>Publish Date: {{newBook.publish_details[0].publish_date | date :'longDate'}}</h5>
+             
+            <button type="button" class="btn btn-success" style="padding: 10px; margin-right: 10px;" id="updateButton" (click)="Openform()" >UPDATE</button>
+            <button type="button" class="btn btn-success" style="padding: 10px;"(click)="delete(bookid)">DELETE</button>
+       </div>
+   </div>
+</div>
+
+<form style="padding: 20px; display:none" method="PUT" id="updateForm" (ngSubmit)="update(newBook)">
+    <div class="form-group row justify-content-center"><label class="col-sm-1 col-form-label" for="name">Name</label>
+        <div class="col-sm-3"><input [(ngModel)]="newBook.name"class="form-control" type="text" name="name" placeholder="Enter Name" /></div>
+    </div>
+    <div class="form-group row justify-content-center"><label class="col-sm-1 col-form-label" for="author">Author</label>
+        <div class="col-sm-3"><input [(ngModel)]= "newBook.author"class="form-control"  type="text" name="author" placeholder="Enter Author" /></div>
+    </div>
+    <div class="form-group row justify-content-center"><label class="col-sm-1 col-form-label" for="price">Price</label>
+        <div class="col-sm-3"><input [(ngModel)]= "newBook.price" class="form-control"  type="number" name="price" placeholder="Enter Price" /></div>
+    </div>
+    <div class="form-group row justify-content-center"><label class="col-sm-1 col-form-label" for="language">Language</label>
+        <div class="col-sm-3"><input [(ngModel)]= "newBook.publish_details[0].language" class="form-control"  type="text" name="language" placeholder="Enter Language" /></div>
+    </div>
+    <div class="form-group row justify-content-center"><label class="col-sm-1 col-form-label" for="publisher">Publisher</label>
+        <div class="col-sm-3"><input [(ngModel)]= "newBook.publish_details[0].publisher" class="form-control"  type="text" name="publisher" placeholder="Enter Publisher" /></div>
+    </div>
+    <div class="form-group row justify-content-center"><label class="col-sm-1 col-form-label" for="publish_date">Publisher</label>
+        <div class="col-sm-3"><input [(ngModel)]= "newBook.publish_details[0].publish_date" class="form-control"  type="text" name="publish_date" placeholder="Enter Publish Date" /></div>
+    </div>
+   
+    <div class="form-group row justify-content-center">
+        <button class="btn btn-primary mb-2 col-sm-2 col-form-label" type="submit" >Submit</button>
+    </div>
+</form>
+
+
+</body>
+

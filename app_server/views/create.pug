@@ -1,0 +1,33 @@
+extends layout 
+
+block content 
+
+    h2=title
+
+    form(action='' method='Post')
+        .form-group.row
+            label.col-sm-2.col-form-label(for='name') Name
+            .col-sm-6
+                input#title.form-control(type='text' name='name')
+        .form-group.row
+            label.col-sm-2.col-form-label(for='author') Author
+            .col-sm-6
+                input#author.form-control(type='text' name='author' )
+        .form-group.row
+            label.col-sm-2.col-form-label(for='price') Price
+            .col-sm-6
+                input#title.form-control(type='number' name='price')
+        .form-group.row
+            label.col-sm-2.col-form-label(for='language') Language
+            .col-sm-6
+                input#author.form-control(type='text' name='language' )
+        .form-group.row
+            label.col-sm-2.col-form-label(for='publisher') Publisher
+            .col-sm-6
+                input#title.form-control(type='text' name='publisher')
+        .form-group.row
+            label.col-sm-2.col-form-label(for='publish_date') Publish Date
+            .col-sm-6
+                input#author.form-control(type='date' name='publish_date' )
+
+        button.btn.btn-primary.mb-2(type='submit') Submit

@@ -1,0 +1,20 @@
+extends layout 
+
+block content
+        img.img-fluid.d-block.mx-auto.mb-2(src=currentBook.image alt='' style="width:220px; height:320px")
+        h3=title
+        h5
+        b  Book name:#{currentBook.name}
+        h5 
+        b Author:#{currentBook.author}
+        h5 
+        b Price:$#{currentBook.price}
+        each detail in currentBook.publish_details 
+            h5 
+            b Languages available:  #{detail.language}
+            h5 
+            b Publisher: #{detail.publisher}
+            h5 
+            b Publish date: #{detail.publish_date}
+            
+              

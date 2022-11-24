@@ -1,0 +1,88 @@
+<app-header [content]="pageContent.header"></app-header>
+<div class="check">
+<div class="row" >
+    <div class="col-md-9">
+        <div (ngSubmit) ="createNewBook(newBook)" style="padding: 20px;" id="createForm">
+            <div class="form-group row justify-content-center"><label class="col-sm-1 col-form-label" for="name">Name</label>
+                <div class="col-sm-9"><input [(ngModel)]="newBook.name"class="form-control" id="title" type="text" name="name" placeholder="Enter Name" /></div>
+            </div>
+            <div class="form-group row justify-content-center"><label class="col-sm-1 col-form-label" for="author">Author</label>
+                <div class="col-sm-9"><input [(ngModel)]= "newBook.author"class="form-control" id="author" type="text" name="author" placeholder="Enter Author" /></div>
+            </div>
+            <div class="form-group row justify-content-center"><label class="col-sm-1 col-form-label" for="price">Price</label>
+                <div class="col-sm-9"><input [(ngModel)]= "newBook.price" class="form-control" id="title" type="number" name="price" placeholder="Enter Price" /></div>
+            </div>
+            <div class="form-group row justify-content-center"><label class="col-sm-1 col-form-label" for="language">Language</label>
+                <div class="col-sm-9"><input [(ngModel)]="newBook.publish_details[0].language"class="form-control" id="author" type="text" name="language" placeholder="Enter language"/></div>
+            </div>
+            <div class="form-group row justify-content-center"><label class="col-sm-1 col-form-label" for="publisher">Publisher</label>
+                <div class="col-sm-9"><input [(ngModel)]="newBook.publish_details[0].publisher" class="form-control" id="title" type="text" name="publisher" placeholder="Enter publisher Name" /></div>
+            </div>
+            <div class="form-group row justify-content-center"><label class="col-sm-1 col-form-label" for="publish_date">Publish Date</label>
+                <div class="col-sm-9"><input [(ngModel)]="newBook.publish_details[0].publish_date" class="form-control" id="author" type="date" name="publish_date" placeholder="Enter Publish Date" /></div>
+            </div>
+        
+            <div class="form-group row justify-content-center">
+                <button style="margin-right: 10px;" class="btn btn-primary mb-2 col-sm-2 col-form-label" type="button" (click) ="createNewBook(newBook)" id="submitButton">Submit</button> 
+                <!-- <button class="btn btn-primary mb-2 col-sm-2 col-form-label" type="button" (click)="dynamicForm()" id="dynamicButton">Add New Category</button> -->
+            </div>
+           
+        </div>
+       
+        
+    </div>
+
+    <div class="col-md-3">
+        <img src="/assets/create.jpg"  style="width:280px; height:320px;">
+    </div>
+   
+</div>
+<button style="margin-right: 10px;margin-left: 150px;display: none;" class="btn btn-primary mb-2 col-sm-2 col-form-label" (click)="createNewBook(newBook)"id="submitButton2" type="submit">Submit</button>
+</div>
+
+  
+
+
+<!-- <div class="check">
+    <div class="row" >
+        <div class="col-md-9">
+            <form (ngSubmit) ="createNewBook(newBook)" style="padding: 20px;" id="createForm">
+                <div class="form-group row justify-content-center"><label class="col-sm-1 col-form-label" for="name">Name</label>
+                    <div class="col-sm-9"><input [(ngModel)]="newBook.name"class="form-control" id="title" type="text" name="name" placeholder="Enter Name" /></div>
+                </div>
+                <div class="form-group row justify-content-center"><label class="col-sm-1 col-form-label" for="author">Author</label>
+                    <div class="col-sm-9"><input [(ngModel)]= "newBook.author"class="form-control" id="author" type="text" name="author" placeholder="Enter Author" /></div>
+                </div>
+                <div class="form-group row justify-content-center"><label class="col-sm-1 col-form-label" for="price">Price</label>
+                    <div class="col-sm-9"><input [(ngModel)]= "newBook.price" class="form-control" id="title" type="number" name="price" placeholder="Enter Price" /></div>
+                </div>
+                <div class="form-group row justify-content-center"><label class="col-sm-1 col-form-label" for="language">Language</label>
+                    <div class="col-sm-9"><input [(ngModel)]="newBook.publish_details[0].language"class="form-control" id="author" type="text" name="language" placeholder="Enter language"/></div>
+                </div>
+                <div class="form-group row justify-content-center"><label class="col-sm-1 col-form-label" for="publisher">Publisher</label>
+                    <div class="col-sm-9"><input [(ngModel)]="newBook.publish_details[0].publisher" class="form-control" id="title" type="text" name="publisher" placeholder="Enter publisher Name" /></div>
+                </div>
+                <div class="form-group row justify-content-center"><label class="col-sm-1 col-form-label" for="publish_date">Publish Date</label>
+                    <div class="col-sm-9"><input [(ngModel)]="newBook.publish_details[0].publish_date" class="form-control" id="author" type="date" name="publish_date" placeholder="Enter Publish Date" /></div>
+                </div>
+            
+                <div class="form-group row justify-content-center">
+                    <button style="margin-right: 10px;" class="btn btn-primary mb-2 col-sm-2 col-form-label" type="button" (click) ="createNewBook(newBook)" id="submitButton">Submit</button> 
+                    <button class="btn btn-primary mb-2 col-sm-2 col-form-label" type="button" (click)="dynamicForm()" id="dynamicButton">Add New Category</button>
+                </div>
+               
+            </form>
+           
+            
+        </div>
+    
+        <div class="col-md-3">
+            <img src="/assets/create.jpg"  style="width:280px; height:320px;">
+        </div>
+       
+    </div>
+    <button style="margin-right: 10px;margin-left: 150px;display: none;" class="btn btn-primary mb-2 col-sm-2 col-form-label" (click)="createNewBook(newBook)"id="submitButton2" type="submit">Submit</button>
+    </div> -->
+  
+
+

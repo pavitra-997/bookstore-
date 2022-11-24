@@ -1,0 +1,52 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css')
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js")
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet')
+    link#bootstrap-css(href='//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css' rel='stylesheet')
+    link(href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet')
+
+  nav.navbar.navbar-expand-lg.navbar-light.bg-light
+   a.navbar-brand(href='/') Home
+   button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+    span.navbar-toggler-icon
+   #navbarSupportedContent.collapse.navbar-collapse
+    ul.navbar-nav.mr-auto
+      li.nav-item.active
+        a.nav-link(href='/about')
+          | About 
+          span.sr-only (current)
+      li.nav-item.active
+        a.nav-link(href='/list')
+          | List 
+          span.sr-only (current)
+      li.nav-item.active
+        a.nav-link(href='/new')
+          | Create 
+          span.sr-only (current)
+      li.nav-item.active
+        a.nav-link(href='/display')
+          | Display 
+          span.sr-only (current)
+      
+
+   form.form-inline.my-2.my-lg-0
+      input.form-control.mr-sm-2(type='search' placeholder='Search' aria-label='Search')
+      button.btn.btn-outline-success.my-2.my-sm-0(type='submit') Search
+
+  body
+    block content
+
+  
+
+    footer.bg-light.text-center.text-lg-start
+
+      .text-center.p-3(style='background-color: rgba(0, 0, 0, 0.2);')
+        | &copy; 2020 Copyright:
+        a.text-dark(href='https://mdbootstrap.com/') The Book House
+
+
+

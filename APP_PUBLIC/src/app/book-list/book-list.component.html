@@ -1,0 +1,25 @@
+<app-header [content]="pageContent.header"></app-header>
+<div class="container py-5">
+
+    <div class="row pb-5 mb-4">
+        
+        <div *ngFor="let book of books" class="col-md-3 mb-4 mb-lg-0">
+            <div class="card rounded shadow-sm border-0">
+                <div class="card-body p-4"></div>
+                <img class="img-fluid d-block mx-auto mb-3" routerLink="/book/{{book._id}}" src={{book.image}} alt="" style="width:220px; height:320px" />
+                <h4><a class="text-dark" routerLink="/book/{{book._id}}">{{book.name}}</a></h4>
+                <h5>{{book.author}}</h5>
+                <h3>${{book.price}}</h3>
+                <ul class="list-inline small">
+                    <li class="list-inline-item m-0"></li><i class="fa fa-star text-success"></i>
+                    <li class="list-inline-item m-0"></li><i class="fa fa-star text-success"></i>
+                    <li class="list-inline-item m-0"></li><i class="fa fa-star text-success"></i>
+                    <li class="list-inline-item m-0"></li><i class="fa fa-star text-success"></i>
+                    <li class="list-inline-item m-0"></li><i class="fa fa-star-o text-success"></i>
+                </ul>
+            </div>
+        </div>
+   
+    </div>
+<p> </p><a href="/new">Add new book here</a>
+</div>

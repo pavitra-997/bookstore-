@@ -1,0 +1,46 @@
+extends layout
+
+
+
+block content
+    
+
+ .container.py-5
+  // For Demo Purpose
+  header.text-center.mb-5
+    h1.display-4.font-weight-bold Our book collections
+    p.font-italic.text-muted.mb-0 Find your favourites here.
+    
+      |
+  // First Row [Prosucts]
+  h2.font-weight-bold.mb-2 From the Shop
+  p.font-italic.text-muted.mb-4
+    | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.
+  .row.pb-5.mb-4
+    each book in books
+        .col-lg-3.col-md-6.mb-4.mb-lg-0
+            .card.rounded.shadow-sm.border-0
+                .card-body.p-4
+                img.img-fluid.d-block.mx-auto.mb-3(src=book.image alt='' style="width:220px; height:320px")
+                h5
+                    a.text-dark(href=`/books/${book._id}`)=book.name 
+                h6=book.author
+                h3 $ #{book.price}
+                
+               
+                ul.list-inline.small
+                    li.list-inline-item.m-0
+                    i.fa.fa-star.text-success
+                    li.list-inline-item.m-0
+                    i.fa.fa-star.text-success
+                    li.list-inline-item.m-0
+                    i.fa.fa-star.text-success
+                    li.list-inline-item.m-0
+                    i.fa.fa-star.text-success
+                    li.list-inline-item.m-0
+                    i.fa.fa-star-o.text-success
+  p 
+  a(href='/new') Add new book here
+     
+ 
+  

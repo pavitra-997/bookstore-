@@ -1,0 +1,26 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00b7ff;
+}
+.bg-cover {
+  background-size: 100% !important;
+}
+.about_bg {
+  background-image: url(/images/about.jpg) !important;
+  background-size: cover !important;
+  opacity: 0.8;
+
+  height: 500px !important;
+}
+.col-md-3.col-sm-6.col-xs-12{
+  padding-top: 50px;
+}
+.col-md-5.col-sm-6.col-xs-12{
+  padding-top: 50px;
+}
+
+
